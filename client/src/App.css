@@ -1,0 +1,94 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.app-background {
+  background: url('./assets/bg.avif') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.auth-bg{
+  background-color: rgba(239, 236, 231, 0.277);
+}
+
+.pastel-border {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.pastel-border::before,
+.pastel-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #e83654, #ffc4a5);
+  transition: all 0.4s ease;
+}
+
+.pastel-border::before {
+  top: 0;
+}
+
+.pastel-border::after {
+  bottom: 0;
+}
+
+.pastel-border:hover {
+  color: #ff6f61; /* optional: text color change on hover */
+}
+
+.pastel-border:hover::before,
+.pastel-border:hover::after {
+  background: linear-gradient(to left, #e83654, #ffc4a5);
+  box-shadow: 0 0 10px #ffd6a5, 0 0 15px #ffb6b9;
+}
+
+.carousel-img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar {
+  background: linear-gradient(to left, #e83654, #ffc4a5);
+}
+
+.navbar:hover {
+  background: linear-gradient(to left, #ffc4a5, #e83654);
+}
+
+.hover-shadow:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.latest {
+  background-color: #ffc4a5;
+}
+
+.custom-carousel-btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50%;
+  position: relative; /* Prevents overlap from Bootstrap default */
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+
+.custom-carousel-btn:hover {
+  background-color: #31d2f2; /* Lighter info on hover */
+}
+
+.testimonial-box {
+  position: relative;
+  z-index: 2; /* Keeps testimonial content above controls */
+}
+
